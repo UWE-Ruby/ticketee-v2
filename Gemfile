@@ -16,6 +16,10 @@ end
 
 gem 'jquery-rails'
 
+group :development do
+  gem 'railroady'
+end
+
 group :test, :development do
   gem 'rspec-rails', '~> 2.9'
   gem 'pry-rails'
@@ -28,5 +32,6 @@ group :test do
   gem 'factory_girl', '2.6.4'
   gem 'email_spec', '1.2.1'
   gem 'launchy'
+  gem 'simplecov', require: false
 end
 
