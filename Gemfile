@@ -6,7 +6,6 @@ gem 'devise', '~> 2.1.0'
 gem 'cancan', '1.6.7'
 gem 'paperclip', '2.7.0'
 
-gem 'sqlite3'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -17,6 +16,7 @@ end
 gem 'jquery-rails'
 
 group :test, :development do
+  gem 'sqlite3'
   gem 'rspec-rails', '~> 2.9'
   gem 'pry-rails'
   gem 'pry-debugger'
@@ -24,6 +24,10 @@ group :test, :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'launchy'
+end
+
+group :production do
+  gem 'pg'
 end
 
 group :test do
