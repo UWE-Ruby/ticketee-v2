@@ -12,6 +12,24 @@
  *= require_tree
 */
 body {
-  background: #c0c0c0;
+  background: #ccc;
+  font-family: Verdana;
+  line-height: 1.5;
+  margin: 30px;
+}
+
+nav {
+  background: #cfc;
+  padding: 10px;
+}
+
+#flash {
+  background: #fcc;
+}
+
+#wrapper {
+  background: #eee;
+  padding: 10px;
+  margin-top: 10px;
 }
 

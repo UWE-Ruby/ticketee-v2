@@ -25,13 +25,16 @@
     <%= link_to "Sign in", new_user_session_path %>
   <% end %>
 </nav>
-<% flash.each do |key, value| %>
-  <div class='flash' id='<%= key %>'>
-    <%= value %>
+<div id="wrapper">
+  <div id="flash">
+  <% flash.each do |key, value| %>
+    <div class='flash' id='<%= key %>'>
+      <%= value %>
+    </div>
+  <% end %>
   </div>
-<% end %>
 
-<%= yield %>
-
+  <%= yield %>
+</div>
 </body>
 </html>
