@@ -30,6 +30,12 @@ group :production do
   gem 'pg'
 end
 
+group :development do
+  gem "rails-erd"
+  gem "coffee-rails-source-maps"
+  gem 'meta_request'
+end
+
 group :test do
   gem "selenium-webdriver"
   gem 'capybara', '1.1.2'
