@@ -12,6 +12,7 @@ class Project < ActiveRecord::Base
   end
 
   def self.for(user)
+    # TODO: Ensure this actually checks .....
     user.admin? ? Project : Project.viewable_by(user)
   end
 end
