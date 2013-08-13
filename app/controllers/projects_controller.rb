@@ -13,12 +13,21 @@ class ProjectsController < ApplicationController
 
   def create
     @project = Project.new(params[:project])
-    if @project.save
-      flash[:notice] = "Project has been created."
-      redirect_to @project
-    else
-      flash[:alert] = "Project has not been created."
-      render :action => "new"
+    respond_to do |format|
+
+      format.html do
+        if @project.save
+          flash[:notice] = "Project has been created."
+          redirect_to @project
+        else
+          flash[:alert] = "Project has not been created."
+          render :action => "new"
+        end
+      end
+
+      format.js do
+        @project.save
+      end
     end
   end
 

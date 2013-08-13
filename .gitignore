@@ -17,3 +17,6 @@
 public/source_maps/
 public/assets/source_maps/
 
+bin
+coverage
+.env
